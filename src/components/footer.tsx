@@ -10,8 +10,8 @@ const footerGroups = [
   {
     title: "platform",
     links: [
-      { href: "/developer", label: "developers" },
-      { href: "/broker", label: "brokers" },
+      { href: "/channels", label: "channels" },
+      { href: "/knowledge", label: "knowledge" },
       { href: "/about", label: "about" },
       { href: "/docs", label: "documentation" },
     ],
@@ -47,7 +47,7 @@ export default function Footer() {
                 <BrandMark className="h-5 w-5" />
               </span>
               <span>
-                <span className="block text-lg font-black tracking-tight text-zinc-950 dark:text-white">qentrah</span>
+                <span className="block text-lg font-black tracking-tight text-zinc-950 dark:text-white">Chats</span>
                 <span className="block text-[9px] font-black uppercase tracking-[0.2em] text-zinc-400">
                   {t("tagline")}
                 </span>

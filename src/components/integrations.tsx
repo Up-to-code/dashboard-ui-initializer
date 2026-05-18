@@ -7,12 +7,12 @@ export default function Integrations() {
   return (
     <section id="resources" className="mx-auto flex max-w-7xl flex-col px-6 py-24 sm:py-32">
       <h2 className="text-center font-bold text-4xl tracking-tight sm:text-6xl text-zinc-950 dark:text-white">
-        {isAr ? "متكامل مع منظومتك العقارية." : "Integrated with your ecosystem."}
+        {isAr ? "متكامل مع قنواتك وأدواتك." : "Integrated with your channels and tools."}
       </h2>
       <p className="mt-6 text-center text-zinc-500 dark:text-zinc-400 text-lg sm:text-xl max-w-3xl mx-auto">
         {isAr 
-          ? "اربط كانترا مع أدواتك المفضلة ومنصات التسويق العقاري لتبسيط سير العمل ومزامنة البيانات بشكل فوري."
-          : "Connect Qentrah with your favorite tools and real estate marketing platforms to streamline workflows and sync data instantly."}
+          ? "اربط قنوات العملاء، أنظمة CRM، الجداول، الويب هوك، وأدوات الأتمتة حتى يعمل كل وكيل ذكاء اصطناعي من نفس طبقة التشغيل."
+          : "Connect customer messaging channels, CRMs, sheets, webhooks, and automation tools so every AI agent works from the same operating layer."}
       </p>
       <div className="mt-16 grid grid-cols-1 gap-6 sm:mt-24 sm:grid-cols-2 lg:grid-cols-3">
         {(isAr ? integrationsAr : integrationsEn).map((integration) => (
@@ -56,66 +56,66 @@ export default function Integrations() {
 
 const integrationsEn = [
   {
-    title: "ROSHN",
-    description: "National real estate developer in Saudi Arabia.",
-    url: "https://www.roshn.sa/",
+    title: "WhatsApp",
+    description: "Connect Meta Cloud API, webhooks, test numbers, and verified business messaging.",
+    url: "https://www.whatsapp.com/business/",
   },
   {
-    title: "NEOM",
-    description: "The land of the future, where innovation meets sustainability.",
-    url: "https://www.neom.com/",
+    title: "Telegram",
+    description: "Route Telegram conversations to an AI agent with contact context and handoff rules.",
+    url: "https://telegram.org/",
   },
   {
-    title: "Bayut",
-    description: "Leading real estate portal in the region.",
-    url: "https://www.bayut.sa/",
+    title: "Instagram",
+    description: "Manage customer DMs, agent replies, and escalations from the same workspace.",
+    url: "https://www.instagram.com/",
   },
   {
-    title: "Property Finder",
-    description: "Search for properties for sale and rent.",
-    url: "https://www.propertyfinder.sa/",
+    title: "Messenger",
+    description: "Connect Meta conversations with shared AI instructions and channel analytics.",
+    url: "https://www.messenger.com/",
   },
   {
     title: "Slack",
-    description: "Real-time team communication and inventory alerts.",
+    description: "Notify teammates when a hot lead, low-confidence reply, or human takeover appears.",
     url: "https://slack.com",
   },
   {
     title: "Zapier",
-    description: "Automate your lead workflows and sync with CRM.",
+    description: "Push contacts, messages, and automation events into the tools your team already uses.",
     url: "https://zapier.com",
   },
 ];
 
 const integrationsAr = [
   {
-    title: "روشن",
-    description: "المطور العقاري الوطني الرائد في المملكة العربية السعودية.",
-    url: "https://www.roshn.sa/",
+    title: "واتساب",
+    description: "اربط Meta Cloud API والويب هوك وأرقام الاختبار ورسائل الأعمال الموثقة.",
+    url: "https://www.whatsapp.com/business/",
   },
   {
-    title: "نيوم",
-    description: "أرض المستقبل، حيث يلتقي الابتكار بالاستدامة.",
-    url: "https://www.neom.com/",
+    title: "تيليجرام",
+    description: "وجّه محادثات تيليجرام إلى وكيل ذكاء اصطناعي مع سياق العميل وقواعد التحويل.",
+    url: "https://telegram.org/",
   },
   {
-    title: "بيوت",
-    description: "البوابة العقارية الرائدة في المنطقة.",
-    url: "https://www.bayut.sa/",
+    title: "إنستغرام",
+    description: "أدر رسائل العملاء وردود الوكلاء والتصعيد من نفس مساحة العمل.",
+    url: "https://www.instagram.com/",
   },
   {
-    title: "بروبرتي فايندر",
-    description: "البحث عن عقارات للبيع وللإيجار بسهولة.",
-    url: "https://www.propertyfinder.sa/",
+    title: "ماسنجر",
+    description: "اربط محادثات Meta بتعليمات ذكاء اصطناعي مشتركة وتحليلات للقناة.",
+    url: "https://www.messenger.com/",
   },
   {
     title: "سلاك",
-    description: "تواصل فوري للفريق وتنبيهات المخزون المباشرة.",
+    description: "نبّه الفريق عند ظهور عميل مهم أو رد منخفض الثقة أو طلب تدخل بشري.",
     url: "https://slack.com",
   },
   {
     title: "زابيير",
-    description: "أتمتة سير عمل العملاء والمزامنة مع نظام CRM.",
+    description: "ادفع جهات الاتصال والرسائل وأحداث الأتمتة إلى أدوات فريقك الحالية.",
     url: "https://zapier.com",
   },
 ];

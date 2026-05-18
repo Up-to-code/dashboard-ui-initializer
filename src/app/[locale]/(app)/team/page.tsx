@@ -1,5 +1,5 @@
-import { TeamScreen } from "@/domains/organization";
+import { SettingsScreen } from "@/domains/child-bot-builder/product-screens";
 
 export default function TeamPage() {
-  return <TeamScreen />;
+  return <SettingsScreen title="Team" />;
 }

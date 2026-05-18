@@ -41,16 +41,16 @@ export default function InstitutionalLanding() {
             <div className="absolute inset-0 bg-[linear-gradient(rgba(11,92,255,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(11,92,255,0.05)_1px,transparent_1px)] bg-[size:80px_80px] opacity-40 [mask-image:radial-gradient(ellipse_at_top,black,transparent_80%)] dark:opacity-20" />
           </div>
           <div className="relative mx-auto flex max-w-7xl flex-col justify-start px-6 py-12 md:py-20">
-            <div className="max-w-4xl">
+            <div className="w-full max-w-6xl">
               <div className="flex flex-col items-start text-start">
                 <Reveal>
                   <h1 className={cn(
-                    "text-[clamp(2.5rem,8vw,5.5rem)] font-bold text-zinc-950 dark:text-white",
+                    "max-w-[1120px] text-[clamp(2.5rem,8vw,5.5rem)] font-bold text-zinc-950 dark:text-white",
                     isAr ? "leading-[1.3] tracking-normal" : "leading-[0.92] tracking-tighter"
                   )}>
                     {t("hero.title")}
                   </h1>
-                  <p className="mt-8 max-w-2xl text-lg leading-relaxed text-zinc-600 dark:text-zinc-400 md:text-xl">
+                  <p className="mt-8 max-w-3xl text-lg leading-relaxed text-zinc-600 dark:text-zinc-400 md:text-xl">
                     {t("hero.description")}
                   </p>
                   <div className="mt-10 flex w-full flex-col gap-5 sm:w-auto sm:flex-row">
@@ -76,15 +76,15 @@ export default function InstitutionalLanding() {
             <Reveal>
               <div className="space-y-8">
                 <h2 className="text-4xl font-bold tracking-tight text-zinc-950 dark:text-white md:text-6xl rtl:leading-[1.2]">
-                  {isAr ? "العمل العقاري لا يجب أن يكون صعباً." : "Real estate shouldn't be this hard."}
+                  {isAr ? "اتصالات الذكاء الاصطناعي لا يجب أن تكون مشتتة." : "AI communication should not be scattered."}
                 </h2>
                 <p className="text-lg leading-relaxed text-zinc-500 dark:text-zinc-400 md:text-xl">
                   {isAr 
-                    ? "العمليات اليدوية، البيانات المشتتة، وبطء التنفيذ يكلف الشركات الكثير. حان الوقت للتغيير."
-                    : "Manual processes, scattered data, and slow execution are costing you growth. Fragmented workflows are the invisible tax on your business."}
+                    ? "واتساب، دردشة الموقع، تيليجرام، إنستغرام، وماسنجر تحتاج طبقة تشغيل واحدة للوكلاء والمعرفة والمحادثات."
+                    : "WhatsApp, website chat, Telegram, Instagram, and Messenger need one operating layer for agents, knowledge, contacts, and response quality."}
                 </p>
                 <div className="flex flex-wrap gap-4">
-                  {[isAr ? "بيانات مشتتة" : "Scattered Data", isAr ? "بطء في التنفيذ" : "Slow Execution", isAr ? "فقدان الفرص" : "Lost Opportunities"].map(tag => (
+                  {[isAr ? "قنوات مشتتة" : "Scattered channels", isAr ? "وكلاء غير منظمين" : "Unmanaged agents", isAr ? "معرفة غير متصلة" : "Disconnected knowledge"].map(tag => (
                     <span key={tag} className="rounded-full bg-red-500/10 px-4 py-1.5 text-xs font-bold text-red-600 dark:text-red-400">
                       {tag}
                     </span>

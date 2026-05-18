@@ -58,7 +58,7 @@ export const metadata: Metadata = {
     "dashboard template",
     "admin dashboard",
     "Next.js dashboard",
-    "UI initializer",
+    "Chats UI",
   ],
   authors: [{ name: templateConfig.legalName }],
   creator: templateConfig.legalName,

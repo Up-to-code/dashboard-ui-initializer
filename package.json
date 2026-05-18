@@ -1,5 +1,5 @@
 {
-  "name": "@dashboard-ui-initializer/workspace-app",
+  "name": "@chats-ui/workspace-app",
   "version": "0.1.0",
   "private": true,
   "scripts": {

@@ -12,7 +12,7 @@ const LogoCloud = () => {
     <div className="w-full border-b border-zinc-200/70 px-6 py-12 dark:border-white/[0.08] md:py-16">
       <div className="mx-auto max-w-7xl overflow-hidden">
         <p className="text-center text-sm font-bold uppercase tracking-[0.2em] text-zinc-400 md:text-base">
-          {isAr ? "موثوق من قبل رواد التطوير والوسطاء" : "Trusted by Elite Developers & Brokers"}
+          {isAr ? "مصمم لقنوات العملاء ووكلاء الذكاء الاصطناعي" : "Built for customer channels and AI agents"}
         </p>
 
         <div className="mt-8 flex items-center justify-center overflow-hidden">

@@ -264,26 +264,26 @@
     },
     "home": {
       "hero": {
-        "eyebrow": "B2B real estate clarity",
-        "title": "Real AI for real work.",
-        "description": "Introducing qentrah: the next generation of technology and work for institutional real estate teams.",
+        "eyebrow": "AI channel infrastructure",
+        "title": "Run every customer channel with AI.",
+        "description": "Chats is the operating layer for AI agents across WhatsApp, website chat, Telegram, Instagram, Messenger, and the channels you add next.",
         "primary": "Enter workspace",
-        "secondary": "Partner with us",
+        "secondary": "Talk to us",
         "structure": [
           {
-            "label": "Market truth",
+            "label": "Channel control",
             "value": "01",
-            "helper": "Projects, units, media, and pricing reconciled before teams move."
+            "helper": "Connect every live messaging surface to one workspace."
           },
           {
-            "label": "Partner motion",
+            "label": "Agent operations",
             "value": "02",
-            "helper": "Developers, brokers, and operators share the same live context."
+            "helper": "Assign AI agents, knowledge folders, rules, and escalation paths."
           },
           {
-            "label": "Workspace action",
+            "label": "Conversation clarity",
             "value": "03",
-            "helper": "AI, follow-ups, and approvals turn clarity into the next step."
+            "helper": "See contacts, chat history, response quality, and handoffs."
           }
         ]
       },
@@ -598,35 +598,35 @@
       },
       "cta": {
         "eyebrow": "Ready for the workspace",
-        "title": "Start where the real work continues.",
-        "description": "Enter the workspace, or contact the team to map Qentrah to your developer or brokerage workflow.",
+        "title": "Bring your channels into one AI operating layer.",
+        "description": "Enter the workspace, or contact the team to map your channels, agents, knowledge, automations, and handoff rules.",
         "primary": "Enter workspace",
         "secondary": "Contact team"
       },
       "faq": {
         "eyebrow": "FAQ",
-        "title": "Questions before your team moves in.",
-        "description": "Short answers for developers, brokers, and operators evaluating Qentrah as the shared workspace layer.",
+        "title": "Questions before your team connects channels.",
+        "description": "Short answers for teams evaluating Chats as the shared AI communication layer.",
         "items": [
           {
-            "question": "Who is Qentrah built for?",
-            "answer": "Qentrah is built for real estate developers, brokerage teams, and operators who need one trusted workspace for projects, units, clients, approvals, and handoffs."
+            "question": "Who is Chats built for?",
+            "answer": "Chats is built for teams that manage customer conversations across WhatsApp, website chat, Telegram, Instagram, Messenger, and future channels."
           },
           {
             "question": "How does onboarding work?",
-            "answer": "Teams can start with the workspace, then map their project, inventory, client, and organization flows with the Qentrah team when deeper setup is needed."
+            "answer": "Start by creating a channel, connecting the provider, verifying the webhook, testing a number, then assigning the right AI agent and knowledge folder."
           },
           {
-            "question": "Can developers and brokers work from the same data?",
-            "answer": "Yes. Qentrah is designed around shared project and inventory context so developers, brokers, and operations teams can act from the same verified records."
+            "question": "Can every channel use a different AI agent?",
+            "answer": "Yes. Each channel can have its own agent, model, configuration, knowledge source, escalation behavior, and contact history."
           },
           {
             "question": "How is pricing handled?",
-            "answer": "Pricing starts with the published plans on this page. Larger teams can contact Qentrah for an implementation conversation around organization structure, workflows, and support."
+            "answer": "Pricing starts with the published plans on this page. Larger teams can contact Chats for implementation around channels, message volume, agents, and team access."
           },
           {
             "question": "What makes the workspace trustworthy?",
-            "answer": "The product keeps roles, statuses, approvals, media, and operational records close to the work, so teams can see what is ready, blocked, pending, or synced before moving forward."
+            "answer": "The product keeps channel status, contacts, chat history, knowledge sources, agent settings, and human handoff rules close to the work."
           }
         ]
       }
@@ -913,13 +913,13 @@
       }
     },
     "footer": {
-      "description": "A workspace-native platform for property teams, project operations, broker coordination, and trusted real estate data.",
-      "copyright": "2026 Qentrah Platform. All rights reserved.",
+      "description": "AI channel infrastructure for teams running customer conversations across WhatsApp, website chat, Telegram, Instagram, Messenger, and future integrations.",
+      "copyright": "2026 Chats. All rights reserved.",
       "platform": "Platform",
       "workspace": "Workspace",
       "dashboard": "Workspace",
-      "developers": "Developers",
-      "brokers": "Brokers",
+      "channels": "Channels",
+      "knowledge": "Knowledge",
       "about": "About",
       "contact": "Contact",
       "documentation": "Docs",
@@ -927,7 +927,7 @@
       "legal": "Legal",
       "privacy": "Privacy",
       "terms": "Terms",
-      "tagline": "Workspace infrastructure for real estate teams",
+      "tagline": "AI channel infrastructure",
       "developerReady": "Developer ready",
       "aiNative": "AI native",
       "verifiedOps": "Verified ops"
