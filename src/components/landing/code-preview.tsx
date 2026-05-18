@@ -1,9 +1,9 @@
 import { useTranslations } from "next-intl";
-import { templateConfig } from "@/template-config";
+import { appConfig } from "@/app-config";
 
 export function CodePreview() {
   const t = useTranslations("Landing.codePreview");
-  const brand = templateConfig.appName.replace(/\s+/g, "");
+  const brand = appConfig.appName.replace(/\s+/g, "");
 
   return (
     <section className="py-16 px-6 md:px-12 w-full max-w-5xl mx-auto">

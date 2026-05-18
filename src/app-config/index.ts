@@ -1,10 +1,10 @@
-export const templateConfig = {
+export const appConfig = {
   appName: "Chats",
   productName: "Chats",
   legalName: "Chats",
   description: "AI channel infrastructure for agents, contacts, knowledge, automations, and analytics.",
   domainUrl: "http://localhost:3000",
-  themeStorageKey: "dashboard-ui-theme",
+  themeStorageKey: "chats-ui-theme",
   defaultLocale: "en",
   demoOrganizationId: "demo-account",
   branding: {
@@ -28,9 +28,9 @@ export const templateConfig = {
     email: "workspace@example.com",
     phone: "+1 555 0100",
     website: "https://example.com",
-    address: "100 Template Street",
+    address: "100 Chats Street",
     status: "Workspace ready",
   },
 } as const;
 
-export type TemplateConfig = typeof templateConfig;
+export type AppConfig = typeof appConfig;

@@ -5,7 +5,7 @@ import type { AgentChatMessage, AgentThread } from "@/domains/agents/api/chat";
 import type { PartnerCatalogApp, PartnerConnection } from "@/domains/integrations/store/integrations.types";
 import type { Project } from "@/domains/projects/store/projects.types";
 import type { PropertyUnit } from "@/domains/properties/store/properties.types";
-import { templateConfig } from "@/template-config";
+import { appConfig } from "@/app-config";
 
 const now = Date.now();
 const day = 24 * 60 * 60 * 1000;
@@ -59,7 +59,7 @@ export const demoProjects: Project[] = [
     id: "prj-3",
     name: "Beacon Onboarding",
     reference: "PRJ-003",
-    developer: "Template Team",
+    developer: "Chats Team",
     city: "Dammam",
     area: "Customer Success",
     type: "Workflow",
@@ -75,7 +75,7 @@ export const demoProjects: Project[] = [
     updated: "3d ago",
     updatedAt: now - 3 * day,
     createdAt: now - 6 * day,
-    description: "A draft project that keeps empty, draft, and edit states visible in the template.",
+    description: "A draft project that keeps empty, draft, and edit states visible in Chats UI.",
   },
 ];
 
@@ -151,7 +151,7 @@ export const demoProperties: PropertyUnit[] = [
 export const demoClients: Client[] = [
   {
     id: "cl-1",
-    organizationId: templateConfig.demoOrganizationId,
+    organizationId: appConfig.demoOrganizationId,
     name: "Jordan Lee",
     type: "Buyer",
     contact: "jordan@example.com",
@@ -177,7 +177,7 @@ export const demoClients: Client[] = [
   },
   {
     id: "cl-2",
-    organizationId: templateConfig.demoOrganizationId,
+    organizationId: appConfig.demoOrganizationId,
     name: "Sam Rivera",
     type: "Tenant",
     contact: "sam@example.com",
@@ -203,7 +203,7 @@ export const demoClients: Client[] = [
   },
   {
     id: "cl-3",
-    organizationId: templateConfig.demoOrganizationId,
+    organizationId: appConfig.demoOrganizationId,
     name: "Capital Ventures",
     type: "Investor",
     contact: "ops@example.com",
@@ -229,7 +229,7 @@ export const demoClients: Client[] = [
   },
   {
     id: "cl-4",
-    organizationId: templateConfig.demoOrganizationId,
+    organizationId: appConfig.demoOrganizationId,
     name: "Taylor Chen",
     type: "Broker",
     contact: "taylor@example.com",
@@ -269,21 +269,21 @@ export const demoClientTasks: ClientTask[] = [
 ];
 
 export const demoCalendarEvents: CalendarEvent[] = [
-  { id: "cal-1", organizationId: templateConfig.demoOrganizationId, title: "Dashboard review", owner: "Jordan Lee", date: "2026-05-18", time: "10:30", type: "meeting", status: "confirmed", clientId: "cl-1", propertyId: "unt-1", unitId: "unt-1", clientName: "Jordan Lee", unitTitle: "Executive Overview", startAt: now + 2 * 60 * 60 * 1000, endAt: now + 3 * 60 * 60 * 1000, location: "Demo room" },
-  { id: "cal-2", organizationId: templateConfig.demoOrganizationId, title: "Metrics walkthrough", owner: "Capital Ventures", date: "2026-05-19", time: "13:00", type: "audit", status: "pending", clientId: "cl-3", propertyId: "unt-2", clientName: "Capital Ventures", unitTitle: "Metrics Board", startAt: now + day, endAt: now + day + 60 * 60 * 1000 },
-  { id: "cal-3", organizationId: templateConfig.demoOrganizationId, title: "Onboarding sync", owner: "Sam Rivera", date: "2026-05-20", time: "15:15", type: "follow-up", status: "draft", clientId: "cl-2", clientName: "Sam Rivera", startAt: now + 2 * day, endAt: now + 2 * day + 45 * 60 * 1000 },
+  { id: "cal-1", organizationId: appConfig.demoOrganizationId, title: "Dashboard review", owner: "Jordan Lee", date: "2026-05-18", time: "10:30", type: "meeting", status: "confirmed", clientId: "cl-1", propertyId: "unt-1", unitId: "unt-1", clientName: "Jordan Lee", unitTitle: "Executive Overview", startAt: now + 2 * 60 * 60 * 1000, endAt: now + 3 * 60 * 60 * 1000, location: "Demo room" },
+  { id: "cal-2", organizationId: appConfig.demoOrganizationId, title: "Metrics walkthrough", owner: "Capital Ventures", date: "2026-05-19", time: "13:00", type: "audit", status: "pending", clientId: "cl-3", propertyId: "unt-2", clientName: "Capital Ventures", unitTitle: "Metrics Board", startAt: now + day, endAt: now + day + 60 * 60 * 1000 },
+  { id: "cal-3", organizationId: appConfig.demoOrganizationId, title: "Onboarding sync", owner: "Sam Rivera", date: "2026-05-20", time: "15:15", type: "follow-up", status: "draft", clientId: "cl-2", clientName: "Sam Rivera", startAt: now + 2 * day, endAt: now + 2 * day + 45 * 60 * 1000 },
 ];
 
 export const demoActivityEvents: ActivityEvent[] = [
   { id: "act-1", actor: "Alex Morgan", action: "approved", target: "Northstar Launch", status: "approved", date: "2m ago" },
   { id: "act-2", actor: "Demo Service", action: "updated", target: "Metrics Board", status: "pending", date: "1h ago" },
-  { id: "act-3", actor: "Template Owner", action: "created draft", target: "Workflow Detail", status: "draft", date: "3h ago" },
+  { id: "act-3", actor: "Chats Owner", action: "created draft", target: "Workflow Detail", status: "draft", date: "3h ago" },
   { id: "act-4", actor: "Local Mock", action: "requested review", target: "Capital Ventures", status: "pending", date: "1d ago" },
 ];
 
 export const demoAgentThreads: AgentThread[] = [
-  { id: "thread-1", organizationId: templateConfig.demoOrganizationId, title: "Dashboard summary", createdByUserId: "demo-user", createdAt: now - day, updatedAt: now - 60 * 60 * 1000, lastMessageAt: now - 60 * 60 * 1000 },
-  { id: "thread-2", organizationId: templateConfig.demoOrganizationId, title: "Pipeline cleanup", createdByUserId: "demo-user", createdAt: now - 2 * day, updatedAt: now - day, lastMessageAt: now - day },
+  { id: "thread-1", organizationId: appConfig.demoOrganizationId, title: "Dashboard summary", createdByUserId: "demo-user", createdAt: now - day, updatedAt: now - 60 * 60 * 1000, lastMessageAt: now - 60 * 60 * 1000 },
+  { id: "thread-2", organizationId: appConfig.demoOrganizationId, title: "Pipeline cleanup", createdByUserId: "demo-user", createdAt: now - 2 * day, updatedAt: now - day, lastMessageAt: now - day },
 ];
 
 export const demoAgentMessages: AgentChatMessage[] = [
@@ -296,5 +296,5 @@ export const demoPartnerApps: PartnerCatalogApp[] = [
 ];
 
 export const demoPartnerConnections: PartnerConnection[] = [
-  { id: "conn-1", organizationId: templateConfig.demoOrganizationId, partnersAppId: "app-1", partnersClientId: "crm-demo", status: "active", effectiveStatus: "active", scopes: ["clients:read"], updatedAt: now - 3 * 60 * 60 * 1000, partnerApp: demoPartnerApps[0] },
+  { id: "conn-1", organizationId: appConfig.demoOrganizationId, partnersAppId: "app-1", partnersClientId: "crm-demo", status: "active", effectiveStatus: "active", scopes: ["clients:read"], updatedAt: now - 3 * 60 * 60 * 1000, partnerApp: demoPartnerApps[0] },
 ];

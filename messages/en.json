@@ -634,7 +634,7 @@
     "about": {
       "hero": {
         "eyebrow": "Our Vision",
-        "title": "A new era for real estate operations.",
+        "title": "A new era for Chats operations.",
         "description": "We believe that clarity, trust, and shared operational truth are the foundation of a modern real estate market. Our mission is to build the infrastructure that empowers teams to move with confidence."
       },
       "signals": {
@@ -2128,20 +2128,20 @@
     "roles": {
       "pageEyebrow": "Allowed work",
       "pageTitle": "Custom work roles",
-      "pageDesc": "Create one clear work rule at a time. The screen stays focused: choose a template, adjust the work grid, and save it for the invite dropdown.",
+      "pageDesc": "Create one clear work rule at a time. The screen stays focused: choose a preset, adjust the work grid, and save it for the invite dropdown.",
       "backToOrganization": "Back to organization",
       "lessIsMoreHint": "Less is more: invite people on the team table, create work roles here.",
       "manageWorkRoles": "Custom work roles",
-      "templatesTitle": "Start from a work role",
-      "templatesDesc": "Choose a real estate operations template or start blank. Templates are copied into your new work role and never change the protected built-in roles.",
-      "templateSelect": "Start from",
-      "templateBlank": "Blank custom work role",
+      "presetsTitle": "Start from a work role",
+      "presetsDesc": "Choose a Chats operations preset or start blank. Presets are copied into your new work role and never change the protected built-in roles.",
+      "presetSelect": "Start from",
+      "presetBlank": "Blank custom work role",
       "defaultLabels": {
         "owner": "Owner",
         "admin": "Admin",
         "member": "Member"
       },
-      "templates": {
+      "presets": {
         "owner": "Owner",
         "operationsManager": "Operations Manager",
         "projectManager": "Project Manager",
@@ -2150,7 +2150,7 @@
         "calendarCoordinator": "Calendar Coordinator",
         "viewer": "Viewer"
       },
-      "templateHelp": {
+      "presetHelp": {
         "owner": "Can run the organization, manage people, work roles, projects, properties, clients, calendar, integrations, API keys, and connected apps.",
         "operationsManager": "Can manage daily operations across projects, properties, clients, calendar, people, and core integrations.",
         "projectManager": "Can view, add, manage, and remove projects; can manage related properties, clients, and calendar work.",
@@ -2159,7 +2159,7 @@
         "calendarCoordinator": "Can manage schedules and view the people, projects, properties, and clients needed for appointments.",
         "viewer": "Can view organization work without changing records."
       },
-      "useTemplate": "Use template",
+      "usePreset": "Use preset",
       "blankTitle": "Create custom work role",
       "blankDesc": "Start with no allowed work selected and choose each responsibility yourself.",
       "createTitle": "Create custom work role",

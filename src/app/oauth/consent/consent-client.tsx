@@ -80,7 +80,7 @@ const permissionMeta: Record<string, { icon: LucideIcon; en: string; ar: string;
   },
 };
 
-function formatTemplate(value: string, replacements: Record<string, string>) {
+function formatMessage(value: string, replacements: Record<string, string>) {
   return Object.entries(replacements).reduce(
     (text, [key, replacement]) => text.replaceAll(`{${key}}`, replacement),
     value,
@@ -119,8 +119,8 @@ export function OAuthConsentClient({ locale }: { locale: OAuthLocale }) {
   const resourceScopes = scopes.filter((scope) => scope.includes(":"));
   const organizationName = organization?.name ?? copy.fallbackOrganization;
   const appName = partnerApp?.name ?? (clientId ? knownLocalApps[clientId]?.name : undefined) ?? copy.fallbackApp;
-  const consentTitle = formatTemplate(copy.consentTitle, { app: appName, organization: organizationName });
-  const consentDescription = formatTemplate(copy.consentDescription, { app: appName, organization: organizationName });
+  const consentTitle = formatMessage(copy.consentTitle, { app: appName, organization: organizationName });
+  const consentDescription = formatMessage(copy.consentDescription, { app: appName, organization: organizationName });
 
   useEffect(() => {
     if (!clientId) return;
@@ -212,7 +212,7 @@ export function OAuthConsentClient({ locale }: { locale: OAuthLocale }) {
         </div>
 
         <div className="px-5 py-5 sm:px-8">
-          <h2 className="text-sm font-black text-[#111827]">{formatTemplate(copy.permissionIntro, { app: appName, organization: organizationName })}</h2>
+          <h2 className="text-sm font-black text-[#111827]">{formatMessage(copy.permissionIntro, { app: appName, organization: organizationName })}</h2>
 
           <div className="mt-3 space-y-3">
             {displayScopes.map((scope) => {

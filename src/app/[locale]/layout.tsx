@@ -10,7 +10,7 @@ import { UiLocalizer } from '@/components/i18n/ui-localizer';
 import { BackendProviders } from "@/components/providers/backend-providers";
 import { ToastProvider } from "@/components/ui/toast";
 import { ThemeProvider } from "@/components/providers/theme-provider";
-import { templateConfig } from "@/template-config";
+import { appConfig } from "@/app-config";
 
 type Locale = (typeof routing.locales)[number];
 
@@ -36,7 +36,7 @@ const cairo = Cairo({
 const themeInitScript = `
 (() => {
   try {
-    const theme = window.localStorage.getItem("${templateConfig.themeStorageKey}") === "dark" ? "dark" : "light";
+    const theme = window.localStorage.getItem("${appConfig.themeStorageKey}") === "dark" ? "dark" : "light";
     document.documentElement.classList.toggle("dark", theme === "dark");
     document.documentElement.style.colorScheme = theme;
   } catch {
@@ -47,22 +47,21 @@ const themeInitScript = `
 `;
 
 export const metadata: Metadata = {
-  metadataBase: new URL(templateConfig.domainUrl),
-  applicationName: templateConfig.productName,
+  metadataBase: new URL(appConfig.domainUrl),
+  applicationName: appConfig.productName,
   title: {
-    default: templateConfig.productName,
-    template: `%s | ${templateConfig.appName}`,
+    default: appConfig.productName,
+    template: `%s | ${appConfig.appName}`,
   },
-  description: templateConfig.description,
+  description: appConfig.description,
   keywords: [
-    "dashboard template",
     "admin dashboard",
     "Next.js dashboard",
     "Chats UI",
   ],
-  authors: [{ name: templateConfig.legalName }],
-  creator: templateConfig.legalName,
-  publisher: templateConfig.legalName,
+  authors: [{ name: appConfig.legalName }],
+  creator: appConfig.legalName,
+  publisher: appConfig.legalName,
   manifest: "/manifest.webmanifest",
   icons: {
     icon: [
@@ -76,28 +75,28 @@ export const metadata: Metadata = {
   },
   appleWebApp: {
     capable: true,
-    title: templateConfig.appName,
+    title: appConfig.appName,
     statusBarStyle: "default",
   },
   openGraph: {
     type: "website",
     url: "/",
-    siteName: templateConfig.appName,
-    title: templateConfig.productName,
-    description: templateConfig.description,
+    siteName: appConfig.appName,
+    title: appConfig.productName,
+    description: appConfig.description,
     images: [
       {
         url: "/app-icon-512.png",
         width: 512,
         height: 512,
-        alt: `${templateConfig.appName} icon`,
+        alt: `${appConfig.appName} icon`,
       },
     ],
   },
   twitter: {
     card: "summary",
-    title: templateConfig.productName,
-    description: templateConfig.description,
+    title: appConfig.productName,
+    description: appConfig.description,
     images: ["/app-icon-512.png"],
   },
 };

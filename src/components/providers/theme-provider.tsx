@@ -1,7 +1,7 @@
 "use client";
 
 import { createContext, useContext, useEffect, useMemo, useState, type ReactNode } from "react";
-import { templateConfig } from "@/template-config";
+import { appConfig } from "@/app-config";
 
 type Theme = "light" | "dark";
 
@@ -12,7 +12,7 @@ type ThemeContextValue = {
   toggleTheme: () => void;
 };
 
-const THEME_STORAGE_KEY = templateConfig.themeStorageKey;
+const THEME_STORAGE_KEY = appConfig.themeStorageKey;
 const ThemeContext = createContext<ThemeContextValue | null>(null);
 
 function applyTheme(theme: Theme) {

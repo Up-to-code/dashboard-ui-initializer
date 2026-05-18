@@ -11,7 +11,7 @@ import { ToastProvider } from "@/components/ui/toast";
 import { AccountProvider } from "@/domains/auth";
 import { cn } from "@/lib/utils";
 import { markAppPerformance } from "@/lib/utils/performance";
-import { templateConfig } from "@/template-config";
+import { appConfig } from "@/app-config";
 import { useLocale } from "next-intl";
 
 export function DashboardAppWrapper({ children }: { children: ReactNode }) {
@@ -25,7 +25,7 @@ export function DashboardAppWrapper({ children }: { children: ReactNode }) {
 function DashboardAuthenticatedShell({ children }: { children: ReactNode }) {
   useEffect(() => {
     markAppPerformance("shell:ready", { workspaceStatus: "demo" });
-    markAppPerformance("workspace:ready", { organizationId: templateConfig.demoOrganizationId });
+    markAppPerformance("workspace:ready", { organizationId: appConfig.demoOrganizationId });
   }, []);
 
   return (

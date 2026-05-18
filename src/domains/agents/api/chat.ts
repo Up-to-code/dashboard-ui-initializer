@@ -56,7 +56,7 @@ export async function sendAgentChatRequest(input: {
   await fakeAsync(null, 220);
   input.onEvent({
     type: "text",
-    text: `This template is running without a real AI backend. Your message was: "${input.message}". Replace the demo agent service when you connect production logic.`,
+    text: `Chats UI is running without a real AI backend. Your message was: "${input.message}". Replace the demo agent service when you connect production logic.`,
   });
   input.onEvent({ type: "done", threadId });
 }

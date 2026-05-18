@@ -12,7 +12,7 @@ import { brandSetupSchema, type BrandSetupInput } from "../validation/onboarding
 
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 import { HelpCircle } from "lucide-react";
-import { templateConfig } from "@/template-config";
+import { appConfig } from "@/app-config";
 
 interface FormProps {
   onNext: () => void;
@@ -22,7 +22,7 @@ interface FormProps {
 export function BrandSetupForm({ onNext, onBack }: FormProps) {
   const t = useTranslations("Onboarding.brand");
   const tc = useTranslations("Common");
-  const defaultBrandColor = templateConfig.branding.accentColor;
+  const defaultBrandColor = appConfig.branding.accentColor;
   const { register, handleSubmit, formState: { errors } } = useForm<BrandSetupInput>({
     resolver: zodResolver(brandSetupSchema),
     defaultValues: { brandColor: defaultBrandColor },

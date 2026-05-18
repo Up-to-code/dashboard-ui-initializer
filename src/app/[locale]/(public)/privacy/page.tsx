@@ -1,8 +1,8 @@
 import { LegalArticle, LegalBlock } from "@/components/landing/public-page-shell";
-import { templateConfig } from "@/template-config";
+import { appConfig } from "@/app-config";
 
 export default function PrivacyPage() {
-  const workspaceName = templateConfig.productName;
+  const workspaceName = appConfig.productName;
   const privacyEmail = "privacy@example.com";
   return (
     <LegalArticle title="Privacy Policy" updated="Last updated: May 4, 2026">

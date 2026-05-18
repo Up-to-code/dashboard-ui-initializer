@@ -1,8 +1,8 @@
 import { LegalArticle, LegalBlock } from "@/components/landing/public-page-shell";
-import { templateConfig } from "@/template-config";
+import { appConfig } from "@/app-config";
 
 export default function TermsPage() {
-  const workspaceName = templateConfig.productName;
+  const workspaceName = appConfig.productName;
   return (
     <LegalArticle title="Terms of Service" updated="Last updated: May 4, 2026">
       <LegalBlock title="1. Acceptance of Terms">

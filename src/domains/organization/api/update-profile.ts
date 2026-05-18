@@ -1,4 +1,4 @@
-import { templateConfig } from "@/template-config";
+import { appConfig } from "@/app-config";
 import type { UpdateOrganizationProfileValues } from "../validation/organization.schema";
 
 export type OrganizationProfile = {
@@ -19,13 +19,13 @@ export async function updateOrganizationProfileRequest(
 ) {
   return {
     organizationId,
-    name: input.name || templateConfig.account.name,
-    legalName: input.legalName || templateConfig.account.legalName,
-    type: input.type || templateConfig.account.type,
-    email: input.email || templateConfig.account.email,
-    phone: input.phone || templateConfig.account.phone,
-    website: input.website || templateConfig.account.website,
-    address: input.address || templateConfig.account.address,
+    name: input.name || appConfig.account.name,
+    legalName: input.legalName || appConfig.account.legalName,
+    type: input.type || appConfig.account.type,
+    email: input.email || appConfig.account.email,
+    phone: input.phone || appConfig.account.phone,
+    website: input.website || appConfig.account.website,
+    address: input.address || appConfig.account.address,
     updatedAt: Date.now(),
   } satisfies OrganizationProfile;
 }

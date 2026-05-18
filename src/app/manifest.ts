@@ -1,13 +1,13 @@
 import type { MetadataRoute } from "next";
-import { templateConfig } from "@/template-config";
+import { appConfig } from "@/app-config";
 
 export default function manifest(): MetadataRoute.Manifest {
-  const name = templateConfig.productName;
+  const name = appConfig.productName;
 
   return {
     name,
-    short_name: templateConfig.appName,
-    description: templateConfig.description,
+    short_name: appConfig.appName,
+    description: appConfig.description,
     start_url: "/",
     scope: "/",
     display: "standalone",

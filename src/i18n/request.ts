@@ -1,6 +1,6 @@
 import {getRequestConfig} from 'next-intl/server';
 import {routing} from '@/i18n/routing';
-import { templateConfig } from '@/template-config';
+import { appConfig } from '@/app-config';
 
 type Locale = (typeof routing.locales)[number];
 
@@ -10,9 +10,9 @@ function isLocale(locale: string): locale is Locale {
 
 function applyBrandMessages(value: unknown, locale: Locale): unknown {
   if (typeof value === "string") {
-    const brand = locale === "ar" ? "لوحة التحكم" : templateConfig.appName;
-    const workspace = locale === "ar" ? "لوحة التحكم" : templateConfig.appName;
-    const platform = locale === "ar" ? "قالب لوحة التحكم" : templateConfig.productName;
+    const brand = locale === "ar" ? "Chats" : appConfig.appName;
+    const workspace = locale === "ar" ? "Chats" : appConfig.appName;
+    const platform = locale === "ar" ? "Chats" : appConfig.productName;
 
     return value
       .replaceAll("Qentrahd Workspace", workspace)

@@ -1,13 +1,13 @@
 import { LegalArticle, LegalBlock } from "@/components/landing/public-page-shell";
-import { templateConfig } from "@/template-config";
+import { appConfig } from "@/app-config";
 
 export default function LegalPage() {
-  const workspaceName = templateConfig.productName;
+  const workspaceName = appConfig.productName;
   const legalEmail = "legal@example.com";
   return (
     <LegalArticle title="Legal Notice" updated="Last updated: May 4, 2026">
       <LegalBlock title="Company Information">
-        <p>{workspaceName} is a reusable dashboard UI template. Replace this placeholder with your own company details.</p>
+        <p>{workspaceName} is a Chats dashboard UI. Replace this placeholder with your own company details.</p>
         <ul className="list-inside list-disc space-y-1">
           <li>Headquarters: Riyadh, Kingdom of Saudi Arabia</li>
           <li>
@@ -25,7 +25,7 @@ export default function LegalPage() {
       </LegalBlock>
 
       <LegalBlock title="Intellectual Property">
-        <p>All template content is provided for customization. Replace this section with your own intellectual property notice.</p>
+        <p>All Chats content is provided for customization. Replace this section with your own intellectual property notice.</p>
       </LegalBlock>
 
       <LegalBlock title="Dispute Resolution">

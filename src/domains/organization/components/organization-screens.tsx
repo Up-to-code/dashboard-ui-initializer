@@ -77,7 +77,7 @@ type WorkArea = {
   advanced?: boolean;
 };
 
-type WorkRoleTemplate = {
+type WorkRolePreset = {
   id: string;
   suggestedName: string;
   labelKey: string;
@@ -105,7 +105,7 @@ const advancedWorkAreas: WorkArea[] = [
   { resource: "role", labelKey: "role", helperKey: "role", advanced: true },
 ];
 
-const workRoleTemplates: WorkRoleTemplate[] = [
+const workRolePresets: WorkRolePreset[] = [
   {
     id: "owner",
     suggestedName: "owner-operator",
@@ -2003,7 +2003,7 @@ export function CustomPermissionsScreen() {
   const [rolePermission, setRolePermission] = useState<Partial<Record<PermissionResource, string[]>>>(emptyPermission);
   const [editingRole, setEditingRole] = useState<OrganizationRole | null>(null);
   const [showAdvancedWork, setShowAdvancedWork] = useState(false);
-  const [templateId, setTemplateId] = useState("blank");
+  const [presetId, setPresetId] = useState("blank");
 
   const membersQuery = useQuery({
     queryKey: ["organization-members", organizationId],
@@ -2046,7 +2046,7 @@ export function CustomPermissionsScreen() {
       setRoleName("");
       setRolePermission(emptyPermission());
       setEditingRole(null);
-      setTemplateId("blank");
+      setPresetId("blank");
       queryClient.invalidateQueries({ queryKey: ["organization-roles", organizationId] });
       toast({ title: t("toasts.roleSavedTitle"), description: t("toasts.roleSavedDesc"), type: "success" });
     },
@@ -2065,7 +2065,7 @@ export function CustomPermissionsScreen() {
     setEditingRole(role);
     setRoleName(role.role);
     setRolePermission(role.permission);
-    setTemplateId("blank");
+    setPresetId("blank");
   }
 
   function togglePermission(resource: PermissionResource, action: string) {
@@ -2079,19 +2079,19 @@ export function CustomPermissionsScreen() {
     });
   }
 
-  function applyTemplate(nextTemplateId: string) {
-    setTemplateId(nextTemplateId);
+  function applyPreset(nextPresetId: string) {
+    setPresetId(nextPresetId);
     setEditingRole(null);
-    if (nextTemplateId === "blank") {
+    if (nextPresetId === "blank") {
       setRoleName("");
       setRolePermission(emptyPermission());
       return;
     }
 
-    const template = workRoleTemplates.find((item) => item.id === nextTemplateId);
-    if (!template) return;
-    setRoleName(template.suggestedName);
-    setRolePermission(template.permission);
+    const preset = workRolePresets.find((item) => item.id === nextPresetId);
+    if (!preset) return;
+    setRoleName(preset.suggestedName);
+    setRolePermission(preset.permission);
   }
 
   if (account.isPending) {
@@ -2141,17 +2141,17 @@ export function CustomPermissionsScreen() {
                 <Input id="roleName" value={roleName} onChange={(event) => setRoleName(event.target.value)} placeholder={t("roles.namePlaceholder")} className="h-11 rounded-xl" />
               </div>
               <div className="space-y-2">
-                <Label htmlFor="roleTemplate" className="text-[10px] font-black uppercase tracking-widest text-zinc-500">{t("roles.templateSelect")}</Label>
-                <select id="roleTemplate" value={templateId} onChange={(event) => applyTemplate(event.target.value)} className="h-11 w-full rounded-xl border border-zinc-200 bg-white px-3 text-sm font-bold dark:border-white/10 dark:bg-[#111]">
-                  <option value="blank">{t("roles.templateBlank")}</option>
-                  {workRoleTemplates.map((template) => (
-                    <option key={template.id} value={template.id}>{t(`roles.templates.${template.labelKey}`)}</option>
+                <Label htmlFor="rolePreset" className="text-[10px] font-black uppercase tracking-widest text-zinc-500">{t("roles.presetSelect")}</Label>
+                <select id="rolePreset" value={presetId} onChange={(event) => applyPreset(event.target.value)} className="h-11 w-full rounded-xl border border-zinc-200 bg-white px-3 text-sm font-bold dark:border-white/10 dark:bg-[#111]">
+                  <option value="blank">{t("roles.presetBlank")}</option>
+                  {workRolePresets.map((preset) => (
+                    <option key={preset.id} value={preset.id}>{t(`roles.presets.${preset.labelKey}`)}</option>
                   ))}
                 </select>
               </div>
               <div className="flex gap-2">
                 {editingRole && (
-                  <Button variant="outline" type="button" onClick={() => { setEditingRole(null); setRoleName(""); setRolePermission(emptyPermission()); setTemplateId("blank"); }} className="h-11 rounded-xl">
+                  <Button variant="outline" type="button" onClick={() => { setEditingRole(null); setRoleName(""); setRolePermission(emptyPermission()); setPresetId("blank"); }} className="h-11 rounded-xl">
                     {t("roles.cancelEdit")}
                   </Button>
                 )}

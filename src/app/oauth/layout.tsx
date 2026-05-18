@@ -3,7 +3,7 @@ import { Cairo, Geist, Geist_Mono } from "next/font/google";
 import { cookies, headers } from "next/headers";
 import "../globals.css";
 import { resolveOAuthLocale } from "./oauth-locale";
-import { templateConfig } from "@/template-config";
+import { appConfig } from "@/app-config";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -23,7 +23,7 @@ const cairo = Cairo({
 const themeInitScript = `
 (() => {
   try {
-    const theme = window.localStorage.getItem("${templateConfig.themeStorageKey}") === "dark" ? "dark" : "light";
+    const theme = window.localStorage.getItem("${appConfig.themeStorageKey}") === "dark" ? "dark" : "light";
     document.documentElement.classList.toggle("dark", theme === "dark");
     document.documentElement.style.colorScheme = theme;
   } catch {
@@ -34,8 +34,8 @@ const themeInitScript = `
 `;
 
 export const metadata: Metadata = {
-  title: `Demo authorization | ${templateConfig.productName}`,
-  description: `Demo authorization screen for ${templateConfig.productName}.`,
+  title: `Demo authorization | ${appConfig.productName}`,
+  description: `Demo authorization screen for ${appConfig.productName}.`,
 };
 
 export default async function OAuthLayout({ children }: { children: React.ReactNode }) {

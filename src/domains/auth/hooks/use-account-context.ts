@@ -1,7 +1,7 @@
 "use client";
 
 import { createContext, createElement, useContext, useMemo, type ReactNode } from "react";
-import { templateConfig } from "@/template-config";
+import { appConfig } from "@/app-config";
 import type { WorkspaceStatus } from "../workspace-status";
 
 type AccountContextValue = {
@@ -61,40 +61,40 @@ export function deriveAccountOrganizationPending(input: {
 
 function useAccountContextValue(): AccountContextValue {
   return useMemo(() => {
-    const userName = templateConfig.user.name;
-    const organizationName = templateConfig.account.name;
+    const userName = appConfig.user.name;
+    const organizationName = appConfig.account.name;
 
     return {
       isSignedIn: true,
       isPending: false,
       workspace: {
         status: "ready",
-        organizationId: templateConfig.demoOrganizationId,
+        organizationId: appConfig.demoOrganizationId,
         isOrganizationPending: false,
         isConvexAuthPending: false,
         isConvexAuthenticated: true,
         isReady: true,
       },
       user: {
-        id: templateConfig.user.id,
+        id: appConfig.user.id,
         name: userName,
-        email: templateConfig.user.email,
-        image: templateConfig.user.image,
+        email: appConfig.user.email,
+        image: appConfig.user.image,
         initials: getInitials(userName),
       },
       organization: {
-        id: templateConfig.account.id,
+        id: appConfig.account.id,
         name: organizationName,
-        legalName: templateConfig.account.legalName,
-        type: templateConfig.account.type,
-        email: templateConfig.account.email,
-        phone: templateConfig.account.phone,
-        website: templateConfig.account.website,
-        address: templateConfig.account.address,
+        legalName: appConfig.account.legalName,
+        type: appConfig.account.type,
+        email: appConfig.account.email,
+        phone: appConfig.account.phone,
+        website: appConfig.account.website,
+        address: appConfig.account.address,
         logo: null,
         slug: "demo-account",
-        status: templateConfig.account.status,
-        brandColor: templateConfig.branding.accentColor,
+        status: appConfig.account.status,
+        brandColor: appConfig.branding.accentColor,
         sound: "off",
         initials: getInitials(organizationName),
       },

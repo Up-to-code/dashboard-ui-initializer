@@ -1,22 +1,22 @@
-import { templateConfig } from "@/template-config";
+import { appConfig } from "@/app-config";
 
 type DemoAuthError = { message?: string; code?: string };
 type DemoAuthResult<T> = Promise<{ data: T; error: DemoAuthError | null }>;
 
 const demoOrganization = {
-  id: templateConfig.account.id,
-  name: templateConfig.account.name,
+  id: appConfig.account.id,
+  name: appConfig.account.name,
   slug: "demo-account",
   logo: null,
   metadata: JSON.stringify({
-    status: templateConfig.account.status,
-    brandColor: templateConfig.branding.accentColor,
+    status: appConfig.account.status,
+    brandColor: appConfig.branding.accentColor,
   }),
 };
 
 const demoSession = {
-  session: { id: "demo-session", userId: templateConfig.user.id },
-  user: templateConfig.user,
+  session: { id: "demo-session", userId: appConfig.user.id },
+  user: appConfig.user,
 };
 
 function useDemoQuery<T>(data: T) {

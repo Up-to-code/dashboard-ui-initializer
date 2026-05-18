@@ -1,21 +1,21 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { templateConfig } from "@/template-config";
+import { appConfig } from "@/app-config";
 
 export const BrandMark = ({ className = "h-5 w-5", priority = false }: { className?: string; priority?: boolean }) => (
   <>
     <Image
-      src={templateConfig.branding.logoLight}
-      alt={templateConfig.appName}
+      src={appConfig.branding.logoLight}
+      alt={appConfig.appName}
       width={24}
       height={28}
       className={`${className} dark:hidden`}
       priority={priority}
     />
     <Image
-      src={templateConfig.branding.logoDark}
-      alt={templateConfig.appName}
+      src={appConfig.branding.logoDark}
+      alt={appConfig.appName}
       width={24}
       height={28}
       className={`${className} hidden dark:block`}
@@ -31,7 +31,7 @@ export const Logo = () => {
         <BrandMark className="h-5 w-5" priority />
       </div>
       <span className="text-[17px] font-black tracking-tight text-zinc-950 dark:text-white">
-        {templateConfig.appName}
+        {appConfig.appName}
       </span>
     </Link>
   );

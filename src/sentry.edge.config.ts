@@ -1,1 +1,1 @@
-// Monitoring removed for the UI-only template.
+// Monitoring removed for the Chats UI.
