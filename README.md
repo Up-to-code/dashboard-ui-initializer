@@ -148,3 +148,7 @@ activity, integrations, and organization settings for a ready organization.
 - [Workspace docs index](./docs/README.md)
 - [Workspace server README](./src/server/README.md)
 - [Workspace Convex README](./convex/README.md)
+
+## Project links
+
+[Source](https://github.com/Up-to-code/dashboard-ui-initializer) · [Issues](https://github.com/Up-to-code/dashboard-ui-initializer/issues) · [Public project directory](https://github.com/qentrah/.github/blob/main/profile/PROJECTS.md)
